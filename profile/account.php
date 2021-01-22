@@ -1,6 +1,4 @@
-<?php 
-session_start();
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +8,12 @@ session_start();
 </head>
 <body>
 <?php 
-    $_SESSION['user'] = [
-       'id'=>1,
-       'name'=>'Luân'
-    ];
-
-    var_dump($_SESSION);
+    if(isset($_SESSION['user'])){
+        echo 'Xin chao '.$_SESSION['user']['username'];
+        echo '<a href="/cp17/profile/logout.php">Đăng xuất</a>';
+    }
 ?>
+
+
 </body>
 </html>
