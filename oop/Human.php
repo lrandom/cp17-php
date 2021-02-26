@@ -37,14 +37,6 @@ class Human
     }
 }
 
-class Teacher extends Human
-{
-    public function teach ()
-    {
-        echo 'I am teaching';
-    }
-}
-
 
 $thai = new Human("Thái", "đen");
 $thai->hairColor = "đen";
@@ -63,8 +55,3 @@ $hieu->sleep();
 echo 'Ten human la'.$hieu->name;
 echo 'Màu mắt là';
 echo($thai->eyeColor);//đen
-
-$luan = new Teacher("Luan", "đen");
-$luan->eat();
-$luan->sleep();
-$luan->teach();
