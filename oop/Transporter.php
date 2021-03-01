@@ -10,6 +10,16 @@ class Transporter
     private $name;
     protected $material;
 
+    /**
+     * Transporter constructor.
+     * @param $name
+     */
+    public function __construct ($name)
+    {
+        $this->name = $name;
+    }
+
+
     public function run ()
     {
         echo $this->name.' running';
@@ -22,9 +32,26 @@ class Car extends Transporter
     {
         echo $this->material;
     }
+
+    /*Override method - Ghi đè phương thức*/
+    public function run ()
+    {
+        echo "Tôi là ô tô đang chạy";
+    }
+
+    static function getClassName ()
+    {
+        return Car::class;
+    }
 }
 
-$car = new Transporter();
+$car = new Transporter("Máy bay");
 //$car->name;
 $car->run();
+
+$car2 = new Car("Vinfast");
+$car2->run();
+
+echo Car::getClassName();
+
 ?>
