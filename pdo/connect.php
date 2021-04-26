@@ -1,5 +1,4 @@
 <?php
-
 try {
     //kết nối đến CSDL có khả năng xảy ra lỗi
     $conn = new PDO('mysql:host=localhost;dbname=cp17',
