@@ -9,6 +9,8 @@ try {
     //sử dụng vs các lệnh cấu trúc
     echo 'Kết nối thành công';
 } catch (PDOException $e) {
+    echo $e->getMessage();
+    var_dump($e->getTrace());
     echo 'Kết nối thất bại';
 }
 
